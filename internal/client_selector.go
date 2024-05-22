@@ -323,7 +323,6 @@ func (s *ClientSelector) createTransport(ctx context.Context,
 	// Prepare the TLS configuration:
 	// #nosec 402
 	config := &tls.Config{
-		ServerName:         address.Host,
 		InsecureSkipVerify: s.insecure,
 		RootCAs:            s.trustedCAs,
 	}
